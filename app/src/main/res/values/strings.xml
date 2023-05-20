@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">FoodRecipeDB</string>
+    <string name="title_home">Home</string>
+    <string name="title_favourite">Favourite</string>
+    <string name="title_setting">Area</string>
+    <string name="title_activity_bottom_bar">BottomBarActivity</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="title_activity_bottom_nav">BottomNavActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="filter">Filter</string>
+    <string name="search">Search</string>
+    <string name="instructions">Instructions</string>
+    <string name="ingredient">Ingredient</string>
+    <string name="video">Video</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="area">Area</string>
+    <string name="categories">Categories</string>
+</resources>

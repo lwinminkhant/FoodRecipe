@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.lmkhant.foodrecipedb.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_filter_fragment"
+            app:destination="@id/filter_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favourite"
+        android:name="com.lmkhant.foodrecipedb.ui.favourite.FavouriteFragment"
+        android:label="@string/title_favourite"
+        tools:layout="@layout/fragment_favourite" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.lmkhant.foodrecipedb.ui.search.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/filter_fragment"
+        android:name="com.lmkhant.foodrecipedb.ui.FilterFragment"
+        android:label="@string/filter">
+        <argument
+            android:name="Filter"
+            app:argType="com.lmkhant.foodrecipedb.model.FilterQuery" />
+        <action
+            android:id="@+id/action_filter_fragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.lmkhant.foodrecipedb.ui.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe">
+        <argument
+            android:name="RecipeId"
+            app:argType="string"
+            android:defaultValue="Null" />
+    </fragment>
+
+</navigation>
